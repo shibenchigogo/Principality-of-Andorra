@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Globe, Mountain } from 'lucide-react';
-import { siteConfig } from './site';
+import { siteConfig } from '@/config/site';
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
