@@ -1,9 +1,9 @@
 export const siteConfig = {
   // 基本信息
-  name: "Black Duck",
-  title: "Black Duck DAO",
-  description: "A DAO organization built on Solana, dedicated to AI development and applications.",
-  slogan: "Building the future of AI on Solana blockchain",
+  name: "Andorra",
+  title: "Andorra DAO",
+  description: "A DAO organization built on Solana, revolutionizing Andorra's tourism through blockchain and AI.",
+  slogan: "Transforming tourism through blockchain technology",
 
   // 合约信息
   contract: {
@@ -12,38 +12,48 @@ export const siteConfig = {
 
   // 代币信息
   token: {
-    symbol: "$BDuck",
-    requiredAmount: 10000,  // OG 所需代币数量
+    symbol: "$Andorra",
+    requiredAmount: 100000,  // 所需代币数量用于免费签证申请
   },
 
   // 倒计时配置
   countdown: {
     hours: 48,
-    title: "OG Status Claim",
-    description: "Time remaining to claim OG status"
+    title: "Token Benefits Access",
+    description: "Time remaining for early token benefits"
   },
 
   // 团队信息
   team: [
     {
-      name: "James Wilson",
+      name: "Marc Rossell",
       role: "CEO & Founder",
-      description: "Visionary leader with 15+ years experience in blockchain and Web3 technologies."
+      description: "Former tourism executive with deep connections in Andorra's hospitality sector."
     },
     {
-      name: "Sarah Chen",
+      name: "Sofia Martinez",
       role: "CTO",
-      description: "Technical genius behind our infrastructure. Previously led development at major Web3 projects."
+      description: "Blockchain architect specializing in tourism applications and AI integration."
     },
     {
-      name: "Michael Zhang",
-      role: "Head of Research",
-      description: "PhD in Cryptography. Leading our research initiatives in DeFi innovations."
+      name: "Pierre Dubois",
+      role: "Head of Tourism Relations",
+      description: "20+ years experience in European tourism development and strategic partnerships."
     },
     {
-      name: "Elena Rodriguez",
-      role: "Chief Strategy Officer",
-      description: "Strategic mastermind with deep expertise in DeFi protocols and market analysis."
+      name: "Anna Serra",
+      role: "Chief Innovation Officer",
+      description: "AI specialist focused on creating personalized tourist experiences through technology."
+    },
+    {
+      name: "Joan Mitjana",
+      role: "Head of Community",
+      description: "Native Andorran focused on building bridges between traditional tourism and Web3."
+    },
+    {
+      name: "Maria Costa",
+      role: "Chief Marketing Officer",
+      description: "Expert in digital marketing and blockchain community building with tourism focus."
     }
   ],
 

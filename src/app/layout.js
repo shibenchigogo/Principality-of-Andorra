@@ -12,15 +12,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Black Duck DAO',
-  description: 'A DAO organization built on Solana',
+  title: 'Andorra DAO',
+  description: 'A DAO organization revolutionizing Andorra tourism through blockchain and AI',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-blue-900/20 to-blue-950/40`}
       >
         {children}
       </body>
