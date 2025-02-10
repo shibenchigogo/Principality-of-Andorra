@@ -131,17 +131,22 @@ const TeamMember = ({ role, name, description }) => (
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-600 via-blue-800 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#1E3A8A] via-[#1E40AF] to-[#1E4ED8] text-white">
       {/* Header / Navigation */}
       <nav className="p-8 flex justify-between items-center">
-        <div className="flex items-center gap-3 border border-blue-800/50 px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <svg className="w-8 h-6" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+        <div className="flex items-center gap-3 border border-white/20 px-4 py-2 rounded-lg bg-white/10 backdrop-blur hover:bg-white/20 transition-all duration-300 cursor-pointer">
+          <svg className="w-10 h-8" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
             <rect width="900" height="600" fill="#0018A8"/>
             <rect width="900" height="400" fill="#FECD00"/>
             <rect width="900" height="200" fill="#C1272D"/>
-            <path fill="#AF1110" d="M415.714 305c1.137 0 2.242.147 3.286.429 1.054.282 2.036.687 2.928 1.214.892.527 1.667 1.176 2.286 1.928.63.742 1.054 1.577 1.286 2.5h-4.429c-.304-.461-.77-.843-1.357-1.143-.577-.3-1.238-.429-2-.429-.762 0-1.423.129-2 .429-.577.3-1.042.682-1.357 1.143h-4.429c.232-.923.656-1.758 1.286-2.5.619-.752 1.393-1.401 2.285-1.928.893-.527 1.875-.932 2.929-1.214 1.044-.282 2.149-.429 3.286-.429zm-6.143 8.571h12.286v2.858h-12.286v-2.858zm0 5.715h12.286v2.857h-12.286v-2.857zm12.286 5.714v2.857h-12.286V325h12.286z"/>
+            <g transform="translate(350,240) scale(1.2)">
+              <path fill="#AF1110" d="M415.714 305c1.137 0 2.242.147 3.286.429 1.054.282 2.036.687 2.928 1.214.892.527 1.667 1.176 2.286 1.928.63.742 1.054 1.577 1.286 2.5h-4.429c-.304-.461-.77-.843-1.357-1.143-.577-.3-1.238-.429-2-.429-.762 0-1.423.129-2 .429-.577.3-1.042.682-1.357 1.143h-4.429c.232-.923.656-1.758 1.286-2.5.619-.752 1.393-1.401 2.285-1.928.893-.527 1.875-.932 2.929-1.214 1.044-.282 2.149-.429 3.286-.429zm-6.143 8.571h12.286v2.858h-12.286v-2.858zm0 5.715h12.286v2.857h-12.286v-2.857zm12.286 5.714v2.857h-12.286V325h12.286z"/>
+            </g>
           </svg>
-          <span className="text-lg font-light tracking-widest">AND</span>
+          <div className="flex flex-col">
+            <span className="text-lg font-light tracking-widest">ANDORRA</span>
+            <span className="text-xs text-white/60">Principality of Andorra</span>
+          </div>
         </div>
         <div className="flex items-center gap-6">
           {/* Social Media Icons */}
@@ -194,7 +199,7 @@ const HomePage = () => {
             <div className="flex items-center justify-center gap-4 bg-blue-900/50 backdrop-blur-sm p-4 rounded-lg border border-blue-800/50">
               <div className="text-zinc-400 font-light">
                 <span className="text-zinc-500">CA: </span>
-                <span className="font-mono">6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPQ</span>
+                <span className="font-mono">2SDZfr5aFs3cDmca1aroesSy5zrakdUnLpULrcUNpump</span>
               </div>
               <button
                 onClick={() => {
