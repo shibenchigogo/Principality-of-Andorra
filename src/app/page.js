@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Globe, Mountain } from 'lucide-react';
+import { siteConfig } from './site';
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -68,14 +69,14 @@ const WalletSubmission = () => {
         <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg px-6 py-4 max-w-2xl mx-auto mb-8">
           <h2 className="text-2xl font-light tracking-wider text-blue-300 mb-4">Verify Token Status</h2>
           <p className="text-lg text-zinc-300 leading-relaxed">
-            Hold minimum 100,000 $Andorra tokens to be eligible for free visa application
+            Hold minimum {siteConfig.token.requiredAmount} ${siteConfig.token.symbol} tokens to be eligible for free visa application
           </p>
         </div>
 
         <div className="bg-blue-900/30 backdrop-blur rounded-lg p-6 max-w-2xl mx-auto mb-8">
-          <h3 className="text-xl font-light tracking-wider text-blue-300 mb-4">About $Andorra Token</h3>
+          <h3 className="text-xl font-light tracking-wider text-blue-300 mb-4">About ${siteConfig.token.symbol} Token</h3>
           <p className="text-lg text-zinc-300 leading-relaxed">
-            $Andorra is the governance token of Andorra DAO. Token holders can participate in important decisions,
+            ${siteConfig.token.symbol} is the governance token of Andorra DAO. Token holders can participate in important decisions,
             receive profit sharing, and enjoy exclusive benefits including free visa applications.
           </p>
         </div>
@@ -129,8 +130,6 @@ const TeamMember = ({ role, name, description }) => (
   </div>
 );
 
-import { siteConfig } from './site';
-
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1E3A8A] via-[#1E40AF] to-[#1E4ED8] text-white">
@@ -153,12 +152,12 @@ const HomePage = () => {
         <div className="flex items-center gap-6">
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
-            <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:scale-110 transform">
+            <a href={siteConfig.social.twitter} className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:scale-110 transform">
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </a>
-            <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:scale-110 transform">
+            <a href={siteConfig.social.telegram} className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:scale-110 transform">
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.52-.46-.01-1.33-.26-1.98-.48-.8-.27-1.43-.42-1.37-.89.03-.25.38-.51 1.03-.78 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.18.14.12.18.28.2.45-.02.07-.02.13-.03.28z"/>
               </svg>
@@ -179,23 +178,22 @@ const HomePage = () => {
                letterSpacing: '0.15em',
                textShadow: '0 0 60px rgba(255,255,255,0.2)'
              }}>
-          Andorra
+          {siteConfig.name}
         </div>
       </div>
-
       {/* Main Content */}
       <main className="container mx-auto px-4 relative">
         {/* Project Introduction */}
         <div className="text-center mb-24 max-w-4xl mx-auto">
           <div className="bg-blue-900/30 backdrop-blur-sm border border-blue-800/50 rounded-2xl p-12 transform hover:scale-[1.02] transition-all duration-500">
             <h1 className="text-3xl font-light mb-6 tracking-[0.2em] bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
-              Andorra DAO
+              {siteConfig.title}
             </h1>
             <p className="text-xl text-zinc-300 leading-relaxed tracking-wider mb-6">
-              A revolutionary DAO organization built on Solana, dedicated to enhancing Andorra's tourism through blockchain technology and AI innovation.
+              {siteConfig.description}
             </p>
             <div className="text-lg text-blue-400/90 italic tracking-wide font-light mb-8">
-              Transforming tourism through blockchain technology
+              {siteConfig.slogan}
             </div>
 
             <div className="flex items-center justify-center gap-4 bg-blue-900/50 backdrop-blur-sm p-4 rounded-lg border border-blue-800/50">
@@ -243,7 +241,7 @@ const HomePage = () => {
         <div className="text-center mb-8">
           <div className="text-2xl font-light tracking-wider text-blue-300 mb-4">Token Benefits Access</div>
           <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto">
-            Hold 100,000 $Andorra tokens to unlock exclusive benefits including free visa applications
+            Hold {siteConfig.token.requiredAmount} ${siteConfig.token.symbol} tokens to unlock exclusive benefits including free visa applications
             and AI tour guide services. Join our community and be part of Andorra's digital transformation.
           </p>
         </div>
@@ -295,39 +293,17 @@ const HomePage = () => {
         {/* Team Section */}
         <section className="max-w-4xl mx-auto pb-24">
           <h2 className="text-3xl font-light text-center mb-4 tracking-widest">Core Team</h2>
-          <p className="text-zinc-400 text-center mb-12 tracking-wider">Meet the innovators behind Andorra DAO</p>
+          <p className="text-zinc-400 text-center mb-12 tracking-wider">Meet the innovators behind {siteConfig.title}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <TeamMember
-              name="Marc Rossell"
-              role="CEO & Founder"
-              description="Former tourism executive with deep connections in Andorra's hospitality sector."
-            />
-            <TeamMember
-              name="Sofia Martinez"
-              role="CTO"
-              description="Blockchain architect specializing in tourism applications and AI integration."
-            />
-            <TeamMember
-              name="Pierre Dubois"
-              role="Head of Tourism Relations"
-              description="20+ years experience in European tourism development and strategic partnerships."
-            />
-            <TeamMember
-              name="Anna Serra"
-              role="Chief Innovation Officer"
-              description="AI specialist focused on creating personalized tourist experiences through technology."
-            />
-            <TeamMember
-              name="Joan Mitjana"
-              role="Head of Community"
-              description="Native Andorran focused on building bridges between traditional tourism and Web3."
-            />
-            <TeamMember
-              name="Maria Costa"
-              role="Chief Marketing Officer"
-              description="Expert in digital marketing and blockchain community building with tourism focus."
-            />
+            {siteConfig.team.map((member, index) => (
+              <TeamMember
+                key={index}
+                name={member.name}
+                role={member.role}
+                description={member.description}
+              />
+            ))}
           </div>
 
           <div className="text-center mt-12">
@@ -340,7 +316,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <footer className="container mx-auto px-4 py-12 text-center text-zinc-600">
-        <p className="text-sm">© 2025 Andorra DAO. All rights reserved.</p>
+        <p className="text-sm">© 2025 {siteConfig.title}. All rights reserved.</p>
       </footer>
     </div>
   );
