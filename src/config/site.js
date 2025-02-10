@@ -2,7 +2,7 @@ export const siteConfig = {
   // 基本信息
   name: "Andorra",
   title: "Andorra DAO",
-  description: "A DAO organization built on Solana, revolutionizing Andorra's tourism through blockchain and AI.",
+  description: "A DAO organization built on Solana, revolutionizing  Andorra's tourism through blockchain and AI.",
   slogan: "Transforming tourism through blockchain technology",
 
   // 合约信息
