@@ -7,7 +7,7 @@ export const siteConfig = {
 
   // 合约信息
   contract: {
-    ca: "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPQ",
+    ca: "H1RFCwDHHeudRAspdnSi2Zm1Bb5argMvZ8Jqrq7apump",
   },
 
   // 代币信息
